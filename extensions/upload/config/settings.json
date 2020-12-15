@@ -1,0 +1,7 @@
+{
+    "provider": "cloudinary",
+    "providerOptions": {     "cloud_name":"mamba",
+      "api_key": "121164434917345",               
+      "api_secret":"JErTk20x0erab5PJVEU_I_w5noA"
+    }
+  }
