@@ -2,56 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/blogs",
-      "handler": "blog.find",
+      "path": "/videos",
+      "handler": "videos.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/blogs/count",
-      "handler": "blog.count",
+      "path": "/videos/count",
+      "handler": "videos.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/blogs/:id",
-      "handler": "blog.findOne",
+      "path": "/videos/:id",
+      "handler": "videos.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/blogs",
-      "handler": "blog.create",
+      "path": "/videos",
+      "handler": "videos.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/blogs/:id",
-      "handler": "blog.update",
+      "path": "/videos/:id",
+      "handler": "videos.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/blogs/:id",
-      "handler": "blog.delete",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/blogs/:id/comment",
-      "handler": "blog.comment",
+      "path": "/videos/:id",
+      "handler": "videos.delete",
       "config": {
         "policies": []
       }

@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "videos",
   "info": {
-    "name": "blog",
+    "name": "Videos",
     "description": ""
   },
   "options": {
@@ -11,39 +11,23 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "blogtitle": {
+    "videoTitle": {
       "type": "string",
+      "required": false,
       "unique": true
     },
-    "blogcontent": {
+    "videoText": {
       "type": "richtext",
       "required": true
     },
-    "blogImage": {
-      "model": "file",
+    "videoPlayer": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "videos"
       ],
       "plugin": "upload",
       "required": false
-    },
-    "categories": {
-      "collection": "categories",
-      "via": "blogs"
-    },
-    "comments": {
-      "collection": "comments",
-      "via": "blogs"
-    },
-    "createdAt": {
-      "type": "date"
-    },
-    "blogSummary": {
-      "type": "richtext",
-      "private": false,
-      "maxLength": 200
     },
     "authorName": {
       "type": "string",
@@ -52,17 +36,24 @@
     },
     "authorPosition": {
       "type": "string",
-      "unique": false,
       "required": true
     },
     "authorImage": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images"
       ],
       "plugin": "upload",
       "required": false
+    },
+    "postedOn": {
+      "type": "date"
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "videos",
+      "dominant": true
     }
   }
 }

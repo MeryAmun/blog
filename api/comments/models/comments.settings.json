@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "Comments",
   "info": {
-    "name": "Categories"
+    "name": "comments"
   },
   "options": {
     "increments": true,
@@ -10,18 +10,19 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "categoryname": {
+    "commentTitle": {
       "type": "string",
+      "required": true,
       "unique": true
     },
+    "commentbody": {
+      "type": "richtext",
+      "required": true
+    },
     "blogs": {
-      "via": "categories",
+      "via": "comments",
       "collection": "blog",
       "dominant": true
-    },
-    "videos": {
-      "via": "categories",
-      "collection": "videos"
     }
   }
 }
