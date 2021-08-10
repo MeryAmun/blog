@@ -9,7 +9,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {},
   "dependencies": {
@@ -33,8 +34,8 @@
     "uuid": "808f4cdb-0bd2-4895-963a-5cb49bea2540"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
-    "npm": ">=6.0.0"
+    "npm": "5.6.0",
+    "node": "8.10.0"
   },
   "license": "MIT"
 }
